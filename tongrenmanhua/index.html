@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>同人漫画-同人创作阅读指南与作品分类推荐</title>
+<meta name="description" content="同人漫画阅读与创作指南，介绍同人漫画的含义、常见分类、阅读方式、创作流程、版权注意事项与常见问题，帮助爱好者快速了解同人漫画世界。">
+<meta name="keywords" content="同人漫画,同人志,二次创作,同人作品,同人阅读,同人创作,同人漫画分类">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#1f1b2e;
+    --ink-soft:#4b4560;
+    --paper:#fbf9ff;
+    --paper-2:#f2edff;
+    --line:#e0d8f5;
+    --accent:#7a4ddb;
+    --accent-2:#e8578f;
+    --accent-3:#3fb6a8;
+    --radius:14px;
+    --shadow:0 6px 22px rgba(70,45,130,.10);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;}
+  .wrap{
+    width:100%;
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* 顶部 */
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(251,249,255,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    min-height:66px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    font-size:1.18rem;
+    letter-spacing:.5px;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .logo-mark{
+    width:34px;height:34px;
+    border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:.9rem;font-weight:700;
+    box-shadow:var(--shadow);
+  }
+  .main-nav{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    font-size:.95rem;
+  }
+  .main-nav a{
+    padding:7px 13px;
+    border-radius:999px;
+    color:var(--ink-soft);
+    transition:.2s;
+  }
+  .main-nav a:hover{
+    background:var(--paper-2);
+    color:var(--accent);
+  }
+  .nav-toggle{
+    display:none;
+    border:1px solid var(--line);
+    background:#fff;
+    border-radius:10px;
+    padding:6px 12px;
+    font-size:.9rem;
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+
+  /* 首屏 */
+  .hero{
+    position:relative;
+    padding:56px 0 46px;
+    background:
+      radial-gradient(circle at 12% 20%,rgba(122,77,219,.14),transparent 45%),
+      radial-gradient(circle at 88% 10%,rgba(232,87,143,.13),transparent 42%),
+      linear-gradient(180deg,var(--paper-2),var(--paper));
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.25fr .85fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero-tag{
+    display:inline-block;
+    font-size:.82rem;
+    letter-spacing:1px;
+    color:var(--accent);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:4px 14px;
+    margin-bottom:16px;
+  }
+  .hero h1{
+    font-size:2.35rem;
+    line-height:1.3;
+    margin:0 0 16px;
+    letter-spacing:.5px;
+  }
+  .hero h1 span{
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .hero p{
+    margin:0 0 22px;
+    color:var(--ink-soft);
+    font-size:1.03rem;
+    max-width:56ch;
+  }
+  .hero-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    padding:11px 22px;
+    border-radius:999px;
+    font-size:.96rem;
+    font-weight:600;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:.2s;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#fff;
+    box-shadow:var(--shadow);
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-ghost{
+    background:#fff;
+    border-color:var(--line);
+    color:var(--ink-soft);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  .hero-panel{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+  }
+  .hero-panel h2{
+    font-size:1rem;
+    margin:0 0 14px;
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .hero-panel h2::before{
+    content:"";
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent-3);
+  }
+  .hero-list{
+    list-style:none;
+    margin:0;padding:0;
+    display:grid;
+    gap:10px;
+  }
+  .hero-list li{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    font-size:.92rem;
+    padding:9px 12px;
+    background:var(--paper-2);
+    border-radius:10px;
+    color:var(--ink-soft);
+  }
+  .hero-list li b{color:var(--ink);font-weight:600;}
+
+  /* 通用区块 */
+  section{padding:52px 0;}
+  .section-head{
+    margin-bottom:28px;
+    max-width:70ch;
+  }
+  .section-head .eyebrow{
+    font-size:.8rem;
+    letter-spacing:2px;
+    color:var(--accent-2);
+    font-weight:700;
+    text-transform:uppercase;
+  }
+  .section-head h2{
+    font-size:1.7rem;
+    margin:8px 0 10px;
+    line-height:1.35;
+  }
+  .section-head p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:.98rem;
+  }
+
+  /* 分类卡片 */
+  .cat-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
+    gap:18px;
+  }
+  .cat-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px 20px;
+    transition:.22s;
+    position:relative;
+    overflow:hidden;
+  }
+  .cat-card::after{
+    content:"";
+    position:absolute;
+    inset:auto -30px -30px auto;
+    width:80px;height:80px;
+    border-radius:50%;
+    background:var(--paper-2);
+    transition:.3s;
+  }
+  .cat-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--accent);
+    box-shadow:var(--shadow);
+  }
+  .cat-card:hover::after{background:#efe7ff;}
+  .cat-icon{
+    width:42px;height:42px;
+    border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.15rem;
+    margin-bottom:14px;
+    color:#fff;
+    position:relative;
+    z-index:1;
+  }
+  .cat-card h3{
+    position:relative;z-index:1;
+    margin:0 0 8px;
+    font-size:1.06rem;
+  }
+  .cat-card p{
+    position:relative;z-index:1;
+    margin:0;
+    font-size:.9rem;
+    color:var(--ink-soft);
+  }
+
+  /* 阅读方式 */
+  .read-layout{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:34px;
+    align-items:start;
+  }
+  .read-layout h3{
+    margin:0 0 12px;
+    font-size:1.15rem;
+  }
+  .read-layout p{
+    margin:0 0 14px;
+    color:var(--ink-soft);
+    font-size:.96rem;
+  }
+  .step-list{
+    list-style:none;
+    margin:0;padding:0;
+    counter-reset:step;
+    display:grid;
+    gap:14px;
+  }
+  .step-list li{
+    position:relative;
+    padding:16px 18px 16px 58px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    font-size:.94rem;
+    color:var(--ink-soft);
+  }
+  .step-list li::before{
+    counter-increment:step;
+    content:counter(step);
+    position:absolute;
+    left:16px;top:16px;
+    width:28px;height:28px;
+    border-radius:9px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:.85rem;font-weight:700;
+  }
+  .step-list li b{color:var(--ink);}
+
+  .tips-box{
+    background:linear-gradient(160deg,#fff,var(--paper-2));
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px;
+  }
+  .tips-box h3{margin-top:0;}
+  .tips-box ul{
+    margin:0;padding-left:18px;
+    color:var(--ink-soft);
+    font-size:.93rem;
+  }
+  .tips-box li{margin-bottom:8px;}
+
+  /* 榜单 */
+  .rank-section{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .rank-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+  }
+  .rank-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+  }
+  .rank-card h3{
+    margin:0 0 14px;
+    font-size:1.02rem;
+    display:flex;align-items:center;gap:8px;
+  }
+  .rank-card h3 em{
+    font-style:normal;
+    font-size:.72rem;
+    background:var(--accent);
+    color:#fff;
+    padding:2px 8px;
+    border-radius:999px;
+  }
+  .rank-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;}
+  .rank-list li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:.92rem;
+    padding-bottom:10px;
+    border-bottom:1px dashed var(--line);
+    color:var(--ink-soft);
+  }
+  .rank-list li:last-child{border-bottom:none;padding-bottom:0;}
+  .rank-num{
+    width:22px;height:22px;
+    flex:0 0 22px;
+    border-radius:7px;
+    background:var(--paper-2);
+    color:var(--accent);
+    display:flex;align-items:center;justify-content:center;
+    font-size:.76rem;font-weight:700;
+  }
+  .rank-list li:nth-child(1) .rank-num{background:var(--accent);color:#fff;}
+  .rank-list li:nth-child(2) .rank-num{background:#b39ae8;color:#fff;}
+  .rank-list li:nth-child(3) .rank-num{background:#e8b0c9;color:#fff;}
+
+  /* 创作指南 */
+  .create-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+  }
+  .create-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent-3);
+    border-radius:var(--radius);
+    padding:20px;
+  }
+  .create-card h3{margin:0 0 10px;font-size:1.02rem;}
+  .create-card p{margin:0;font-size:.92rem;color:var(--ink-soft);}
+
+  /* 术语表 */
+  .gloss-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    font-size:.93rem;
+  }
+  .gloss-table th,
+  .gloss-table td{
+    text-align:left;
+    padding:13px 16px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  .gloss-table th{
+    background:var(--paper-2);
+    color:var(--ink);
+    font-weight:700;
+    white-space:nowrap;
+  }
+  .gloss-table tr:last-child td{border-bottom:none;}
+  .gloss-table td{color:var(--ink-soft);}
+
+  /* FAQ */
+  .faq-list{display:grid;gap:12px;}
+  .faq-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .faq-item summary{
+    cursor:pointer;
+    padding:16px 20px;
+    font-weight:600;
+    font-size:.98rem;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";
+    font-size:1.2rem;
+    color:var(--accent);
+    transition:.2s;
+    flex:0 0 auto;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item p{
+    margin:0;
+    padding:0 20px 18px;
+    color:var(--ink-soft);
+    font-size:.93rem;
+  }
+
+  /* 页脚 */
+  .site-footer{
+    background:#1f1b2e;
+    color:#c9c2dd;
+    padding:44px 0 26px;
+    font-size:.9rem;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:30px;
+    margin-bottom:26px;
+  }
+  .site-footer h4{
+    color:#fff;
+    margin:0 0 12px;
+    font-size:.98rem;
+  }
+  .site-footer p{margin:0 0 10px;line-height:1.7;}
+  .site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;}
+  .site-footer a{color:#c9c2dd;transition:.2s;}
+  .site-footer a:hover{color:#fff;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding-top:16px;
+    text-align:center;
+    font-size:.84rem;
+    color:#948cb0;
+  }
+
+  /* 响应式 */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;}
+    .read-layout{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .nav-toggle{display:inline-block;}
+    .main-nav{
+      display:none;
+      position:absolute;
+      top:66px;left:0;right:0;
+      background:#fff;
+      border-bottom:1px solid var(--line);
+      padding:12px 20px 18px;
+      flex-direction:column;
+      gap:2px;
+      box-shadow:var(--shadow);
+    }
+    .main-nav.open{display:flex;}
+    .main-nav a{padding:10px 12px;border-radius:10px;}
+    .hero{padding:38px 0 34px;}
+    .hero h1{font-size:1.75rem;}
+    section{padding:40px 0;}
+    .section-head h2{font-size:1.4rem;}
+    .footer-grid{grid-template-columns:1fr;}
+    .gloss-table th,.gloss-table td{padding:11px 12px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">同人</span>
+      <span>同人漫画指南站</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="展开导航" id="navToggle">菜单</button>
+    <nav class="main-nav" id="mainNav" aria-label="主导航">
+      <a href="#intro">什么是同人</a>
+      <a href="#category">作品分类</a>
+      <a href="#reading">阅读方式</a>
+      <a href="#ranking">人气榜单</a>
+      <a href="#create">创作入门</a>
+      <a href="#glossary">术语表</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag">二次创作 · 兴趣阅读</span>
+        <h1>同人漫画：<span>从理解概念到找到喜欢的作品</span></h1>
+        <p>同人漫画指创作者基于已有动漫、游戏、影视、小说等作品或角色，在非官方授权前提下进行的自主漫画创作。它既可能是对原作的延伸想象，也可能是全新世界观下的角色再演绎。本页帮助你理清同人漫画的类型、阅读渠道、创作流程与版权边界。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#reading">了解阅读方式</a>
+          <a class="btn btn-ghost" href="#create">查看创作入门</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <h2>快速导航要点</h2>
+        <ul class="hero-list">
+          <li><b>核心定义</b><span>基于原作的二次创作</span></li>
+          <li><b>常见形式</b><span>短篇 / 长篇 / 四格</span></li>
+          <li><b>主要题材</b><span>日常、恋爱、搞笑、架空</span></li>
+          <li><b>阅读渠道</b><span>展会、同人平台、作者主页</span></li>
+          <li><b>关键提醒</b><span>尊重原作与作者意愿</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 什么是同人 -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">概念澄清</span>
+        <h2>同人漫画到底指什么</h2>
+        <p>很多刚接触这一领域的读者会把“同人”和“原创”混为一谈。理解两者区别，是判断作品来源和阅读预期的第一步。</p>
+      </div>
+      <div class="read-layout">
+        <div>
+          <h3>同人漫画的基本特征</h3>
+          <p>同人漫画的核心在于“二次创作”：创作者借用已有作品的角色、设定或世界观，加入自己的理解与想象，形成新的故事。它通常由个人或小规模社团完成，发布渠道相对灵活，更新节奏也更自由。</p>
+          <p>与商业连载相比，同人漫画不以市场销量为主要目标，更强调表达欲和兴趣驱动。因此题材跨度极大，既有轻松日常，也有严肃剧情，甚至会出现跨作品联动的设定。</p>
+          <h3>它与原创漫画的区别</h3>
+          <p>原创漫画的角色与世界观由作者从零构建，版权归属相对清晰；同人漫画则依附于原作，创作和传播都需要考虑原作方的态度与相关规范。这也是同人作品常常强调“非官方”“仅供交流”的原因。</p>
+        </div>
+        <div class="tips-box">
+          <h3>阅读前值得留意的三点</h3>
+          <ul>
+            <li>确认作品是否标注了原作来源与配对倾向，避免阅读预期错位。</li>
+            <li>留意作者的阅读提示，部分作品包含特定题材或分级说明。</li>
+            <li>尊重作者的转载规定，不随意搬运或二次上传。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="category" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">分类导航</span>
+        <h2>按题材与形式划分的常见类型</h2>
+        <p>不同分类对应不同的阅读体验。先明确自己想看什么，再选择渠道，效率会高很多。</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-icon" style="background:linear-gradient(135deg,#7a4ddb,#a98bf0);">日</div>
+          <h3>日常向</h3>
+          <p>围绕角色平淡而温暖的互动展开，节奏舒缓，适合放松阅读，对原作剧情依赖较低。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" style="background:linear-gradient(135deg,#e8578f,#f39ab8);">恋</div>
+          <h3>恋爱向</h3>
+          <p>以角色之间的情感关系为主线，常见配对创作，阅读前建议查看作品标注的倾向说明。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" style="background:linear-gradient(135deg,#3fb6a8,#7fd8cd);">搞</div>
+          <h3>搞笑与吐槽</h3>
+          <p>利用原作设定的反差制造笑点，篇幅通常较短，四格或条漫形式较为常见。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" style="background:linear-gradient(135deg,#f0a13c,#f7c778);">架</div>
+          <h3>架空与AU</h3>
+          <p>把角色放入全新背景，如校园、科幻、古代等设定，考验作者的世界观整合能力。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" style="background:linear-gradient(135deg,#5a7de8,#9db2f5);">剧</div>
+          <h3>剧情向长篇</h3>
+          <p>结构完整、篇幅较长，常对原作留白进行补完或重构，阅读时需要一定原作基础。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" style="background:linear-gradient(135deg,#8a5cd6,#c9a8f2);">合</div>
+          <h3>合同本与多人企划</h3>
+          <p>由多位作者围绕同一主题合作完成，风格多样，适合想一次体验多种画风的读者。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 阅读方式 -->
+  <section id="reading">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">阅读路径</span>
+        <h2>如何找到并阅读同人漫画</h2>
+        <p>同人作品的发布方式比较分散，掌握几个稳定入口，比盲目搜索更有效。</p>
+      </div>
+      <div class="read-layout">
+        <div>
+          <ol class="step-list">
+            <li><b>确定原作与角色</b>：先明确自己想看哪部作品的同人，再围绕作品名和角色名进行检索，能大幅缩小范围。</li>
+            <li><b>选择发布渠道</b>：常见渠道包括同人展会、专门的同人作品发布平台、作者个人主页或社交账号。不同渠道的作品风格和更新频率差异较大。</li>
+            <li><b>查看作品信息</b>：阅读前留意标题、标签、分级说明和作者备注，确认题材与自己的偏好是否匹配。</li>
+            <li><b>关注作者动态</b>：同人作者的更新节奏不固定，关注作者主页或订阅更新提醒，能更及时地看到新作。</li>
+            <li><b>遵守阅读规范</b>：不擅自转载、不用于商业用途、不修改作者署名，是阅读同人作品的基本礼貌。</li>
+          </ol>
+        </div>
+        <div class="tips-box">
+          <h3>检索小技巧</h3>
+          <ul>
+            <li>用“作品名 + 角色名 + 同人”组合检索，命中率更高。</li>
+            <li>注意区分“同人”与“官方番外”，后者属于官方内容。</li>
+            <li>遇到来源不明的转载页面，优先寻找作者原始发布地址。</li>
+            <li>部分平台需要注册或调整内容偏好设置，才能看到完整分类。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section id="ranking" class="rank-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">人气观察</span>
+        <h2>同人漫画常见热度维度</h2>
+        <p>不同平台的热度统计方式不同，以下维度仅作为挑选作品的参考角度，不代表绝对排名。</p>
+      </div>
+      <div class="rank-grid">
+        <article class="rank-card">
+          <h3>按题材热度 <em>常见</em></h3>
+          <ul class="rank-list">
+            <li><span class="rank-num">1</span>日常治愈类，阅读门槛低</li>
+            <li><span class="rank-num">2</span>恋爱与配对向，讨论度高</li>
+            <li><span class="rank-num">3</span>搞笑吐槽类，传播速度快</li>
+            <li><span class="rank-num">4</span>架空AU，创作自由度高</li>
+            <li><span class="rank-num">5</span>剧情补完向，受众相对固定</li>
+          </ul>
+        </article>
+        <article class="rank-card">
+          <h3>按篇幅形式 <em>参考</em></h3>
+          <ul class="rank-list">
+            <li><span class="rank-num">1</span>单页或短篇，适合碎片时间</li>
+            <li><span class="rank-num">2</span>四格漫画，节奏轻快</li>
+            <li><span class="rank-num">3</span>条漫，适合手机阅读</li>
+            <li><span class="rank-num">4</span>中篇连载，剧情更完整</li>
+            <li><span class="rank-num">5</span>长篇合本，信息量大</li>
+          </ul>
+        </article>
+        <article class="rank-card">
+          <h3>挑选时的关注点 <em>建议</em></h3>
+          <ul class="rank-list">
+            <li><span class="rank-num">1</span>作者是否标注原作与配对</li>
+            <li><span class="rank-num">2</span>是否有明确的分级提示</li>
+            <li><span class="rank-num">3</span>画风与叙事是否合口味</li>
+            <li><span class="rank-num">4</span>更新是否稳定</li>
+            <li><span class="rank-num">5</span>读者评价与讨论氛围</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作入门 -->
+  <section id="create">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">创作入门</span>
+        <h2>想自己画同人漫画，从哪一步开始</h2>
+        <p>同人创作的门槛主要在表达意愿而非设备。理清流程后，可以从很短的篇幅开始尝试。</p>
+      </div>
+      <div class="create-grid">
+        <article class="create-card">
+          <h3>第一步：选定原作与切入点</h3>
+          <p>选择你熟悉且真正喜欢的作品，思考原作中哪些情节或关系让你有表达欲。切入点越具体，故事越容易落地。</p>
+        </article>
+        <article class="create-card">
+          <h3>第二步：写简短的分镜脚本</h3>
+          <p>不必一开始就追求完整剧本，先用几句话写清起承转合，再拆成画面。短篇控制在几页内更容易完成。</p>
+        </article>
+        <article class="create-card">
+          <h3>第三步：确定画风与工具</h3>
+          <p>数码绘制和传统手绘都可以。选择自己顺手的工具，优先保证画面清晰、对白易读，而不是追求复杂效果。</p>
+        </article>
+        <article class="create-card">
+          <h3>第四步：标注作品信息</h3>
+          <p>在作品开头或简介中注明原作名称、配对倾向、分级说明和转载规定，方便读者判断是否适合阅读。</p>
+        </article>
+        <article class="create-card">
+          <h3>第五步：选择发布方式</h3>
+          <p>可以先在个人主页或同人社区发布，观察反馈后再考虑参加展会或制作实体本。发布前确认平台规则。</p>
+        </article>
+        <article class="create-card">
+          <h3>第六步：注意版权边界</h3>
+          <p>同人创作应避免直接商用原作素材，不冒用官方名义，不侵犯原作者署名权。遇到原作方明确禁止的情况，应停止相关创作与传播。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 术语表 -->
+  <section id="glossary" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">术语速查</span>
+        <h2>读同人漫画常遇到的词汇</h2>
+        <p>了解这些常见说法，能帮助你更快看懂作品标注和社区讨论。</p>
+      </div>
+      <table class="gloss-table">
+        <thead>
+          <tr>
+            <th>术语</th>
+            <th>含义说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>同人志</td>
+            <td>由个人或社团自主编辑、制作的出版物，内容不限于漫画，也可能包含插画、小说等。</td>
+          </tr>
+          <tr>
+            <td>配对</td>
+            <td>指作品中重点描写的角色关系组合，通常以特定写法标注，阅读前可据此判断内容倾向。</td>
+          </tr>
+          <tr>
+            <td>AU</td>
+            <td>Alternate Universe 的缩写，指把原作角色放入与原作不同的世界观或设定中。</td>
+          </tr>
+          <tr>
+            <td>OOC</td>
+            <td>Out Of Character 的缩写，指角色言行偏离原作设定，常被读者用作内容提示。</td>
+          </tr>
+          <tr>
+            <td>合同本</td>
+            <td>多位作者围绕同一主题共同创作、合并成册的作品集。</td>
+          </tr>
+          <tr>
+            <td>再录本</td>
+            <td>将作者此前已发布过的作品重新整理收录而成的合集。</td>
+          </tr>
+          <tr>
+            <td>分级提示</td>
+            <td>作者对作品适宜阅读人群的说明，常见于包含特定题材的作品开头。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">常见问题</span>
+        <h2>关于同人漫画的高频疑问</h2>
+        <p>以下回答基于普遍认知整理，具体规则仍以各平台和原作者的要求为准。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>同人漫画和盗版漫画是一回事吗？</summary>
+          <p>不是。盗版指未经授权复制、传播他人作品，属于侵权行为；同人漫画是创作者基于原作进行的二次创作，虽然同样涉及版权边界，但性质是自主创作而非直接复制。同人创作仍需尊重原作方的相关规定。</p>
+        </details>
+        <details class="faq-item">
+          <summary>阅读同人漫画需要先看原作吗？</summary>
+          <p>不一定。日常向和搞笑类作品通常对原作依赖较低，不了解原作也能读懂；但剧情向或架空设定类作品往往建立在原作基础上，先了解原作会更容易理解人物关系和情节走向。</p>
+        </details>
+        <details class="faq-item">
+          <summary>同人漫画可以用于商业用途吗？</summary>
+          <p>这取决于原作方的授权政策。多数情况下，同人作品限于个人兴趣交流，未经许可不应进行大规模商业销售。若涉及商业行为，建议先了解原作方的同人创作规范。</p>
+        </details>
+        <details class="faq-item">
+          <summary>看到喜欢的同人作品，可以转载吗？</summary>
+          <p>应先查看作者在作品或主页中标注的转载规定。若未明确说明，最稳妥的做法是直接联系作者获得许可，并保留署名与原始出处，不擅自修改内容。</p>
+        </details>
+        <details class="faq-item">
+          <summary>没有绘画基础可以尝试同人创作吗？</summary>
+          <p>可以。同人创作的形式很多，除了漫画，还包括插画、文字、分镜草稿等。从短篇或简单构图开始练习，逐步提升即可，重要的是持续表达。</p>
+        </details>
+        <details class="faq-item">
+          <summary>如何判断一部同人作品是否适合自己？</summary>
+          <p>先看作品的标签、配对标注和分级提示，再浏览开头几页确认画风与叙事节奏。如果题材或表现方式不符合偏好，及时更换作品即可。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>同人漫画指南站</h4>
+        <p>面向同人爱好者的内容导航页，整理同人漫画的概念、分类、阅读方式与创作入门信息，帮助读者更清晰地了解这一创作领域。</p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#intro">什么是同人</a></li>
+          <li><a href="#category">作品分类</a></li>
+          <li><a href="#reading">阅读方式</a></li>
+          <li><a href="#ranking">人气榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>延伸内容</h4>
+        <ul>
+          <li><a href="#create">创作入门</a></li>
+          <li><a href="#glossary">术语表</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>本站内容为同人文化科普与阅读指引，具体作品版权归各自原作者所有。请尊重创作者意愿，遵守相关平台规则。</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('mainNav');
+    if(toggle && nav){
+      toggle.addEventListener('click', function(){
+        nav.classList.toggle('open');
+      });
+      nav.addEventListener('click', function(e){
+        if(e.target.tagName === 'A'){
+          nav.classList.remove('open');
+        }
+      });
+    }
+  })();
+</script>
+
+</body>
+              </html>
