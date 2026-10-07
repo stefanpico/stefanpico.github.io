@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>埋堆堆港剧网 - 港剧观看指南与剧集分类推荐</title>
+<meta name="description" content="埋堆堆港剧网页面，整理港剧观看方式、剧集分类、经典与近期推荐、常见问题及使用建议，帮助你更高效地找到想看的港剧内容。">
+<meta name="keywords" content="埋堆堆港剧网,港剧,港剧推荐,TVB剧集,港剧观看,港剧分类">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1f2430;
+  --ink-soft:#4b5566;
+  --line:#e3e6ee;
+  --bg:#f6f4ef;
+  --card:#ffffff;
+  --brand:#0f5c4e;
+  --brand-deep:#0a3f36;
+  --accent:#e8a33d;
+  --accent-soft:#fdf3e2;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(21,35,50,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+
+/* ---------- 顶部 ---------- */
+.topbar{
+  background:var(--brand-deep);
+  color:#d7e6e1;
+  font-size:13px;
+  padding:8px 0;
+}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.wrap{
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 20px;
+}
+header.site-head{
+  background:linear-gradient(160deg,#0f5c4e 0%,#12735f 55%,#17856c 100%);
+  color:#fff;
+  padding-bottom:58px;
+  position:relative;
+  overflow:hidden;
+}
+header.site-head::after{
+  content:"";
+  position:absolute;
+  right:-120px;top:-120px;
+  width:380px;height:380px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+}
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+  position:relative;
+  z-index:2;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+.logo .mark{
+  width:38px;height:38px;
+  border-radius:10px;
+  background:var(--accent);
+  color:#3a2400;
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;font-weight:800;
+  flex-shrink:0;
+}
+nav.main-nav ul{
+  display:flex;
+  gap:26px;
+  font-size:15px;
+}
+nav.main-nav a{
+  padding-bottom:4px;
+  border-bottom:2px solid transparent;
+  transition:.2s;
+}
+nav.main-nav a:hover{border-color:var(--accent);color:#ffe9c7;}
+
+.hero{
+  position:relative;
+  z-index:2;
+  padding-top:26px;
+  max-width:760px;
+}
+.hero h1{
+  font-size:34px;
+  line-height:1.35;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.hero p.lead{
+  margin-top:16px;
+  font-size:16px;
+  color:#d9efe8;
+  max-width:640px;
+}
+.hero-tags{
+  margin-top:22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.hero-tags span{
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.25);
+  padding:5px 14px;
+  border-radius:999px;
+  font-size:13px;
+  color:#eafff8;
+}
+
+/* ---------- 主体 ---------- */
+main{padding-bottom:10px;}
+section{padding:52px 0;}
+section.tight{padding:40px 0;}
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:26px;
+  flex-wrap:wrap;
+}
+.section-head h2{
+  font-size:23px;
+  font-weight:800;
+  letter-spacing:.4px;
+  position:relative;
+  padding-left:14px;
+}
+.section-head h2::before{
+  content:"";
+  position:absolute;
+  left:0;top:6px;bottom:6px;
+  width:5px;
+  border-radius:4px;
+  background:var(--accent);
+}
+.section-head p{
+  color:var(--ink-soft);
+  font-size:14px;
+  max-width:560px;
+}
+
+/* 分类导航 */
+.cat-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:16px;
+}
+.cat-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px 18px;
+  box-shadow:var(--shadow);
+  transition:transform .2s,box-shadow .2s;
+}
+.cat-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(21,35,50,.12);}
+.cat-card h3{
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:var(--brand);
+}
+.cat-card p{
+  font-size:13.5px;
+  color:var(--ink-soft);
+}
+
+/* 推荐剧集 */
+.drama-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.drama-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+}
+.drama-cover{
+  height:132px;
+  background:linear-gradient(135deg,#0f5c4e,#1c8a71);
+  color:#eafff8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:2px;
+  position:relative;
+}
+.drama-cover.alt1{background:linear-gradient(135deg,#5b3a1e,#a86f2c);}
+.drama-cover.alt2{background:linear-gradient(135deg,#26364f,#4d6b90);}
+.drama-cover.alt3{background:linear-gradient(135deg,#5c2340,#9c4468);}
+.drama-cover.alt4{background:linear-gradient(135deg,#2f4a2c,#5d8a4f);}
+.drama-cover.alt5{background:linear-gradient(135deg,#3c2b5e,#6f57a3);}
+.drama-cover .badge{
+  position:absolute;
+  top:10px;left:10px;
+  font-size:11.5px;
+  background:rgba(0,0,0,.28);
+  border:1px solid rgba(255,255,255,.35);
+  padding:2px 9px;
+  border-radius:999px;
+  letter-spacing:0;
+}
+.drama-body{padding:16px 18px 18px;}
+.drama-body h3{font-size:16.5px;font-weight:700;margin-bottom:8px;}
+.drama-body p{font-size:13.5px;color:var(--ink-soft);}
+.drama-meta{
+  margin-top:12px;
+  font-size:12.5px;
+  color:#8a93a4;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* 榜单 */
+.rank-list{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.rank-item{
+  display:flex;
+  gap:16px;
+  padding:16px 20px;
+  border-bottom:1px solid var(--line);
+  align-items:flex-start;
+}
+.rank-item:last-child{border-bottom:none;}
+.rank-no{
+  flex-shrink:0;
+  width:28px;height:28px;
+  border-radius:8px;
+  background:var(--accent-soft);
+  color:#8a5a12;
+  font-weight:800;
+  font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+}
+.rank-item:nth-child(1) .rank-no{background:#0f5c4e;color:#fff;}
+.rank-item:nth-child(2) .rank-no{background:#17856c;color:#fff;}
+.rank-item:nth-child(3) .rank-no{background:#3aa78c;color:#fff;}
+.rank-item h3{font-size:15.5px;font-weight:700;margin-bottom:4px;}
+.rank-item p{font-size:13.5px;color:var(--ink-soft);}
+
+/* 观看指南 */
+.guide-wrap{
+  display:grid;
+  grid-template-columns:1.25fr .9fr;
+  gap:26px;
+}
+.guide-main{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+.guide-main h3{font-size:18px;font-weight:800;margin-bottom:14px;color:var(--brand);}
+.guide-main p{font-size:14.5px;color:var(--ink-soft);margin-bottom:14px;}
+.step-list{counter-reset:step;margin-top:6px;}
+.step-list li{
+  position:relative;
+  padding-left:40px;
+  margin-bottom:16px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+}
+.step-list li::before{
+  counter-increment:step;
+  content:counter(step);
+  position:absolute;
+  left:0;top:1px;
+  width:26px;height:26px;
+  border-radius:50%;
+  background:var(--accent-soft);
+  color:#8a5a12;
+  font-weight:800;
+  font-size:13px;
+  display:flex;align-items:center;justify-content:center;
+}
+.step-list li strong{color:var(--ink);}
+.side-card{
+  background:var(--accent-soft);
+  border:1px solid #f2dfbc;
+  border-radius:var(--radius);
+  padding:24px;
+}
+.side-card h3{font-size:16.5px;font-weight:800;margin-bottom:12px;color:#7a4d0c;}
+.side-card ul li{
+  font-size:13.8px;
+  color:#6b5228;
+  padding-left:16px;
+  position:relative;
+  margin-bottom:10px;
+}
+.side-card ul li::before{
+  content:"";
+  position:absolute;
+  left:0;top:9px;
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--accent);
+}
+
+/* 常见问题 */
+.faq-list{
+  display:grid;
+  gap:14px;
+}
+.faq-item{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px 22px;
+  box-shadow:var(--shadow);
+}
+.faq-item h3{
+  font-size:15.5px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:var(--brand);
+}
+.faq-item p{font-size:14px;color:var(--ink-soft);}
+
+/* 页脚 */
+footer.site-foot{
+  background:#132a26;
+  color:#a8c3bc;
+  padding:44px 0 26px;
+  margin-top:20px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:30px;
+  padding-bottom:26px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.foot-grid h4{
+  color:#fff;
+  font-size:15px;
+  margin-bottom:14px;
+  font-weight:700;
+}
+.foot-grid p, .foot-grid li{
+  font-size:13.5px;
+  line-height:1.9;
+}
+.foot-grid ul li a:hover{color:#fff;}
+.copyright{
+  padding-top:20px;
+  font-size:12.5px;
+  text-align:center;
+  color:#7c968f;
+}
+
+/* 响应式 */
+@media (max-width:900px){
+  .guide-wrap{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  nav.main-nav{display:none;}
+  .hero h1{font-size:26px;}
+  .hero p.lead{font-size:15px;}
+  section{padding:38px 0;}
+  .section-head h2{font-size:20px;}
+  .foot-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>港剧内容导航 · 分类与观看建议整理</span>
+    <span>本页为信息整理页面，不提供视频存储与播放服务</span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <div class="navbar">
+      <div class="logo">
+        <span class="mark">堆</span>
+        埋堆堆港剧网
+      </div>
+      <nav class="main-nav" aria-label="主导航">
+        <ul>
+          <li><a href="#categories">剧集分类</a></li>
+          <li><a href="#recommend">推荐剧集</a></li>
+          <li><a href="#ranking">热度榜单</a></li>
+          <li><a href="#guide">观看指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <h1>埋堆堆港剧网：港剧分类、推荐与观看方式整理</h1>
+      <p class="lead">
+        想找港剧，却常常不知道从哪里入手？本页围绕港剧的题材分类、选剧思路、常见观看渠道和注意事项做了系统整理，帮助你更快定位到符合口味的剧集，减少在信息中反复翻找的时间。
+      </p>
+      <div class="hero-tags">
+        <span>警匪刑侦</span>
+        <span>家族商战</span>
+        <span>律政职场</span>
+        <span>古装武侠</span>
+        <span>都市情感</span>
+        <span>经典重温</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 分类 -->
+  <section id="categories" class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>港剧题材分类</h2>
+        <p>港剧的题材分布相对集中，先按类型筛选，再挑具体剧集，通常比漫无目的地浏览更有效率。</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <h3>警匪刑侦</h3>
+          <p>以案件侦破、纪律部队与卧底题材为主，节奏偏快，单元案件与主线交织是常见结构。</p>
+        </article>
+        <article class="cat-card">
+          <h3>家族商战</h3>
+          <p>围绕家族企业、股权争夺与人物恩怨展开，人物关系复杂，适合喜欢长线剧情的观众。</p>
+        </article>
+        <article class="cat-card">
+          <h3>律政职场</h3>
+          <p>聚焦律师、医生、航空等专业领域，案件与职业伦理并重，台词密度较高。</p>
+        </article>
+        <article class="cat-card">
+          <h3>古装武侠</h3>
+          <p>包含武侠、宫廷与历史改编方向，注重人物成长线与门派、朝堂之间的冲突。</p>
+        </article>
+        <article class="cat-card">
+          <h3>都市情感</h3>
+          <p>以家庭、婚恋与生活困境为切口，篇幅通常较短，情绪表达细腻。</p>
+        </article>
+        <article class="cat-card">
+          <h3>轻喜剧</h3>
+          <p>节奏轻松，适合碎片时间观看，常以生活化场景和群像互动制造笑点。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 推荐 -->
+  <section id="recommend">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>值得优先了解的剧集方向</h2>
+        <p>以下按题材方向列举，便于按口味挑选，具体剧集信息请以正规平台的正式介绍为准。</p>
+      </div>
+      <div class="drama-grid">
+        <article class="drama-card">
+          <div class="drama-cover">刑侦单元剧<span class="badge">高节奏</span></div>
+          <div class="drama-body">
+            <h3>警匪与卧底题材</h3>
+            <p>以案件推进为主线，适合喜欢悬念和反转的观众。观看时建议留意人物身份线索，前后呼应较多。</p>
+            <div class="drama-meta"><span>适合：追剧党</span><span>观看方式：连续追看</span></div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-cover alt1">家族群像<span class="badge">长线剧情</span></div>
+          <div class="drama-body">
+            <h3>家族商战与恩怨</h3>
+            <p>人物多、关系复杂，前期铺垫较长。建议从人物关系图入手，能明显降低理解成本。</p>
+            <div class="drama-meta"><span>适合：剧情向</span><span>观看方式：按集顺序</span></div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-cover alt2">专业职场<span class="badge">台词密集</span></div>
+          <div class="drama-body">
+            <h3>律政与医疗职场</h3>
+            <p>案件与职业伦理并行，节奏偏稳。适合对专业领域细节感兴趣的观众。</p>
+            <div class="drama-meta"><span>适合：职场题材爱好者</span><span>观看方式：单元式</span></div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-cover alt3">古装武侠<span class="badge">人物成长</span></div>
+          <div class="drama-body">
+            <h3>武侠与宫廷改编</h3>
+            <p>注重人物弧光与门派、朝堂冲突，动作与情感线并重，适合喜欢传统叙事结构的观众。</p>
+            <div class="drama-meta"><span>适合：武侠迷</span><span>观看方式：连续追看</span></div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-cover alt4">都市生活<span class="badge">篇幅适中</span></div>
+          <div class="drama-body">
+            <h3>家庭与情感小品</h3>
+            <p>以生活化场景为主，情绪表达细腻，适合在通勤或休息时间分段观看。</p>
+            <div class="drama-meta"><span>适合：轻松观看</span><span>观看方式：碎片时间</span></div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-cover alt5">经典重温<span class="badge">怀旧向</span></div>
+          <div class="drama-body">
+            <h3>旧作回顾</h3>
+            <p>不少早期港剧在叙事节奏和人物塑造上仍有参考价值，适合按演员或导演线索做主题式回看。</p>
+            <div class="drama-meta"><span>适合：怀旧观众</span><span>观看方式：主题串看</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section id="ranking" class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>选剧参考维度</h2>
+        <p>与其依赖单一榜单，不如结合以下几个维度判断一部剧是否适合自己。</p>
+      </div>
+      <div class="rank-list">
+        <div class="rank-item">
+          <span class="rank-no">1</span>
+          <div>
+            <h3>先看题材，再看长度</h3>
+            <p>题材决定你是否看得下去，集数决定你是否追得完。长剧适合假期，短剧适合日常通勤。</p>
+          </div>
+        </div>
+        <div class="rank-item">
+          <span class="rank-no">2</span>
+          <div>
+            <h3>关注主演与监制组合</h3>
+            <p>同一批演员或制作班底的作品，风格往往有延续性，按人找剧通常比按榜单找剧更准。</p>
+          </div>
+        </div>
+        <div class="rank-item">
+          <span class="rank-no">3</span>
+          <div>
+            <h3>留意播出年份与画质</h3>
+            <p>早期作品在画面比例、配音版本上可能与现在不同，提前了解可避免观看体验落差。</p>
+          </div>
+        </div>
+        <div class="rank-item">
+          <span class="rank-no">4</span>
+          <div>
+            <h3>确认正规观看渠道</h3>
+            <p>优先选择有正版授权的平台，画质、字幕与更新稳定性更有保障，也更利于长期使用。</p>
+          </div>
+        </div>
+        <div class="rank-item">
+          <span class="rank-no">5</span>
+          <div>
+            <h3>参考真实口碑而非标题党</h3>
+            <p>带有强烈情绪化标题的推荐可信度有限，多看几篇侧重剧情与表演的评论更有参考价值。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观看指南 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>港剧观看与查找指南</h2>
+        <p>从确定需求到找到合适剧集，可以按下面的顺序推进，减少无效浏览。</p>
+      </div>
+      <div class="guide-wrap">
+        <div class="guide-main">
+          <h3>一套可复用的找剧流程</h3>
+          <p>港剧数量多、年代跨度大，直接搜索往往会被大量重复信息干扰。把需求拆开，效率会高很多。</p>
+          <ol class="step-list">
+            <li><strong>明确题材偏好。</strong>先确定自己当下想看警匪、商战还是生活向，范围立刻缩小。</li>
+            <li><strong>限定年代区间。</strong>是想看近期新作，还是重温某个时期的经典，这一步能过滤大量无关结果。</li>
+            <li><strong>按演员或班底筛选。</strong>如果你有偏好的演员，直接以其作品列表为线索，命中率通常更高。</li>
+            <li><strong>核对剧情简介与集数。</strong>确认主线是否对胃口，同时判断自己是否有时间追完。</li>
+            <li><strong>选择正规渠道观看。</strong>确认平台的授权情况、字幕版本与更新状态，再决定是否长期使用。</li>
+          </ol>
+        </div>
+        <aside class="side-card">
+          <h3>观看前值得注意的几点</h3>
+          <ul>
+            <li>不同平台的字幕与配音版本可能存在差异，同一部剧的观感会有所不同。</li>
+            <li>部分旧剧存在多个剪辑版本，剧情细节不完全一致。</li>
+            <li>剧集信息以官方页面为准，第三方整理内容可能滞后或有误。</li>
+            <li>合理安排观看时间，避免长时间连续追看影响作息。</li>
+            <li>遇到需要额外付费或索取个人信息的情况，应先核实来源是否正规。</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <p>围绕港剧查找与观看，整理了几个被问得较多的问题。</p>
+      </div>
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3>港剧一般在哪里可以正规观看？</h3>
+          <p>建议优先选择具有正版授权的视频平台，并在平台内搜索剧名确认。不同地区的可观看内容存在差异，具体以你所在地区平台的实际页面为准。</p>
+        </article>
+        <article class="faq-item">
+          <h3>不了解港剧，应该从哪一类开始看？</h3>
+          <p>如果偏好强情节，可以从警匪刑侦类入手；如果喜欢人物关系和长线叙事，家族商战类更合适；只想轻松观看，则可以选篇幅较短的都市生活题材。</p>
+        </article>
+        <article class="faq-item">
+          <h3>为什么同一部剧会有不同版本？</h3>
+          <p>常见原因包括配音版本不同、播出地区剪辑差异以及后续修复重制。观看前可留意平台标注的版本说明，避免与预期不符。</p>
+        </article>
+        <article class="faq-item">
+          <h3>怎样判断一部剧是否值得看？</h3>
+          <p>可以先看剧情简介确认题材，再参考侧重剧情与表演的评论，最后结合集数判断时间成本。避免只看标题或单一评分做决定。</p>
+        </article>
+        <article class="faq-item">
+          <h3>本页面提供视频播放吗？</h3>
+          <p>不提供。本页面是港剧相关的信息整理与观看指引，帮助读者理清分类和查找思路，实际观看请前往正规授权平台。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>埋堆堆港剧网</h4>
+        <p>一个围绕港剧题材分类、选剧思路与观看注意事项整理的信息页面，帮助观众更高效地找到想看的剧集方向。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#categories">剧集分类</a></li>
+          <li><a href="#recommend">推荐剧集</a></li>
+          <li><a href="#ranking">选剧维度</a></li>
+          <li><a href="#guide">观看指南</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <ul>
+          <li>不提供视频存储与播放</li>
+          <li>剧集信息以官方页面为准</li>
+          <li>请通过正规渠道观看</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2024 埋堆堆港剧网 · 本页内容为港剧信息整理与观看指引
+    </div>
+  </div>
+</footer>
+
+</body>
+                          </html>
