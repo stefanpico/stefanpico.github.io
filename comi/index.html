@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>comic漫画-在线漫画阅读推荐与作品分类指南</title>
+<meta name="description" content="comic漫画阅读指南，汇总漫画分类、热门作品推荐、连载更新、阅读方式与选漫技巧，帮助漫画爱好者快速找到适合自己的漫画内容。">
+<meta name="keywords" content="comic漫画,漫画阅读,在线漫画,漫画推荐,漫画分类,连载漫画">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1d2233;
+  --ink-soft:#4d5468;
+  --line:#e6e8f0;
+  --paper:#ffffff;
+  --bg:#f5f6fb;
+  --brand:#ff5a5f;
+  --brand-deep:#e03e44;
+  --accent:#3d5afe;
+  --accent-soft:#eef1ff;
+  --warm:#fff3e6;
+  --radius:16px;
+  --shadow:0 8px 28px rgba(29,34,51,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;gap:28px;
+  height:68px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-size:20px;font-weight:800;letter-spacing:.5px;
+  white-space:nowrap;
+}
+.logo-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,var(--brand),#ff9a6c);
+  color:#fff;display:grid;place-items:center;
+  font-size:16px;font-weight:900;
+  box-shadow:0 6px 14px rgba(255,90,95,.35);
+}
+.logo span em{font-style:normal;color:var(--brand)}
+.main-nav{display:flex;gap:6px;flex:1}
+.main-nav a{
+  padding:8px 14px;border-radius:10px;
+  font-size:15px;color:var(--ink-soft);font-weight:500;
+  transition:.2s;
+}
+.main-nav a:hover{background:var(--accent-soft);color:var(--accent)}
+.header-cta{
+  padding:9px 20px;border-radius:999px;
+  background:var(--brand);color:#fff;font-size:14px;font-weight:600;
+  box-shadow:0 6px 16px rgba(255,90,95,.32);
+  white-space:nowrap;transition:.2s;
+}
+.header-cta:hover{background:var(--brand-deep);transform:translateY(-1px)}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(900px 380px at 88% -10%,rgba(255,90,95,.16),transparent 70%),
+    radial-gradient(700px 340px at 4% 0%,rgba(61,90,254,.14),transparent 72%),
+    #fff;
+  border-bottom:1px solid var(--line);
+  padding:56px 0 48px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:44px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(28px,3.6vw,42px);
+  line-height:1.3;font-weight:800;letter-spacing:-.5px;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(120deg,var(--brand),#ff9a6c);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-lead{
+  margin-top:18px;font-size:17px;color:var(--ink-soft);
+  max-width:640px;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero-tags span{
+  font-size:13px;padding:6px 14px;border-radius:999px;
+  background:#fff;border:1px solid var(--line);color:var(--ink-soft);
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:12px;
+  font-size:15px;font-weight:600;transition:.2s;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(255,90,95,.3)}
+.btn-primary:hover{background:var(--brand-deep);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+.hero-panel{
+  background:#fff;border:1px solid var(--line);border-radius:22px;
+  padding:24px;box-shadow:var(--shadow);
+}
+.hero-panel h2{
+  font-size:16px;font-weight:700;margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.hero-panel h2::before{
+  content:"";width:4px;height:16px;border-radius:2px;background:var(--brand);
+}
+.panel-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:11px 0;border-bottom:1px dashed var(--line);font-size:14px;
+}
+.panel-row:last-child{border-bottom:0}
+.panel-row b{font-weight:600;color:var(--ink)}
+.panel-row span{color:var(--ink-soft);font-size:13px}
+
+/* ---------- section base ---------- */
+.section{padding:60px 0}
+.section-head{margin-bottom:32px}
+.section-head .kicker{
+  font-size:13px;font-weight:700;letter-spacing:2px;
+  color:var(--brand);text-transform:uppercase;
+}
+.section-head h2{
+  font-size:clamp(22px,2.6vw,30px);font-weight:800;
+  margin-top:8px;letter-spacing:-.3px;
+}
+.section-head p{margin-top:10px;color:var(--ink-soft);max-width:760px;font-size:15.5px}
+
+/* ---------- 分类 ---------- */
+.cat-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.cat-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;transition:.22s;
+}
+.cat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d9ddf0}
+.cat-icon{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  font-size:20px;margin-bottom:14px;background:var(--accent-soft);
+}
+.cat-card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.cat-card p{font-size:14px;color:var(--ink-soft)}
+
+/* ---------- 推荐 ---------- */
+.rec-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.rec-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.22s;
+}
+.rec-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.rec-cover{
+  height:132px;display:grid;place-items:center;
+  font-size:15px;font-weight:700;color:#fff;letter-spacing:1px;
+}
+.c1{background:linear-gradient(135deg,#ff7a85,#ffb199)}
+.c2{background:linear-gradient(135deg,#5b7cfa,#8fb4ff)}
+.c3{background:linear-gradient(135deg,#43c6ac,#8fe3cf)}
+.c4{background:linear-gradient(135deg,#f7971e,#ffd200)}
+.c5{background:linear-gradient(135deg,#8e6cf0,#c3a6ff)}
+.c6{background:linear-gradient(135deg,#ff5f6d,#ffc371)}
+.rec-body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.rec-body h3{font-size:17px;font-weight:700}
+.rec-body p{font-size:14px;color:var(--ink-soft);flex:1}
+.rec-meta{display:flex;gap:8px;flex-wrap:wrap}
+.tag{
+  font-size:12px;padding:3px 10px;border-radius:999px;
+  background:var(--warm);color:#a35a12;
+}
+.tag.blue{background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- 更新列表 ---------- */
+.update-layout{
+  display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start;
+}
+.update-list{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;
+}
+.update-item{
+  display:flex;gap:16px;align-items:center;
+  padding:16px 20px;border-bottom:1px solid var(--line);transition:.18s;
+}
+.update-item:last-child{border-bottom:0}
+.update-item:hover{background:#fafbff}
+.update-thumb{
+  width:54px;height:54px;border-radius:12px;flex:none;
+  display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px;
+}
+.update-info{flex:1;min-width:0}
+.update-info h3{font-size:15.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.update-info p{font-size:13px;color:var(--ink-soft);margin-top:2px}
+.update-badge{
+  font-size:12px;color:var(--brand);background:#fff0f0;
+  padding:4px 10px;border-radius:999px;white-space:nowrap;font-weight:600;
+}
+.side-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;margin-bottom:20px;
+}
+.side-card h3{font-size:16px;font-weight:700;margin-bottom:14px}
+.rank-item{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px;
+}
+.rank-item:last-child{border-bottom:0}
+.rank-no{
+  width:22px;height:22px;border-radius:7px;flex:none;
+  display:grid;place-items:center;font-size:12px;font-weight:700;
+  background:var(--accent-soft);color:var(--accent);
+}
+.rank-item:nth-child(1) .rank-no{background:var(--brand);color:#fff}
+.rank-item:nth-child(2) .rank-no{background:#ffb199;color:#fff}
+.rank-item:nth-child(3) .rank-no{background:#ffd9a0;color:#8a5200}
+.rank-item p{font-size:13px;color:var(--ink-soft);margin-top:2px}
+
+/* ---------- 指南 ---------- */
+.guide{
+  background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.guide-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+.guide-item{
+  padding:24px;border-radius:var(--radius);
+  background:var(--bg);border:1px solid var(--line);
+}
+.guide-item .num{
+  font-size:13px;font-weight:800;color:var(--brand);letter-spacing:1px;
+}
+.guide-item h3{font-size:17px;font-weight:700;margin:8px 0 10px}
+.guide-item p{font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- FAQ ---------- */
+.faq-list{display:grid;gap:14px;max-width:900px}
+.faq-item{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:6px 20px;
+}
+.faq-item summary{
+  cursor:pointer;list-style:none;padding:16px 0;
+  font-size:16px;font-weight:600;display:flex;justify-content:space-between;gap:16px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"+";color:var(--brand);font-size:20px;font-weight:400;line-height:1;
+}
+.faq-item[open] summary::after{content:"–"}
+.faq-item p{
+  padding:0 0 18px;font-size:14.5px;color:var(--ink-soft);
+}
+
+/* ---------- footer ---------- */
+.site-footer{
+  background:#1d2233;color:#c7cbd8;padding:48px 0 28px;margin-top:20px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1);
+}
+.footer-brand{font-size:19px;font-weight:800;color:#fff;margin-bottom:12px}
+.footer-grid p{font-size:13.5px;line-height:1.9;color:#9aa0b4}
+.footer-col h4{font-size:14px;color:#fff;margin-bottom:14px;font-weight:700}
+.footer-col a{
+  display:block;font-size:13.5px;color:#9aa0b4;padding:4px 0;transition:.2s;
+}
+.footer-col a:hover{color:#fff}
+.footer-bottom{
+  padding-top:22px;font-size:13px;color:#7d8397;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .update-layout{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:26px}
+}
+@media (max-width:720px){
+  .header-inner{height:60px;gap:14px}
+  .main-nav{display:none}
+  .hero{padding:38px 0 34px}
+  .section{padding:44px 0}
+  .hero-actions .btn{flex:1;text-align:center}
+  .footer-grid{grid-template-columns:1fr}
+  .update-item{padding:14px 16px;gap:12px}
+  .update-badge{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">漫</span>
+      <span>comic<em>漫画</em></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#category">漫画分类</a>
+      <a href="#recommend">作品推荐</a>
+      <a href="#update">连载更新</a>
+      <a href="#guide">阅读指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="header-cta" href="#recommend">开始找漫画</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>comic漫画阅读指南：<em>按分类、题材与更新节奏找到想看的作品</em></h1>
+        <p class="hero-lead">
+          comic漫画通常指以连续画格讲述故事的图像作品，涵盖日式漫画、国漫、条漫、彩色漫等多种形态。
+          对读者来说，真正影响阅读体验的往往不是“哪部最火”，而是题材偏好、更新频率、篇幅长短与阅读设备是否匹配。
+          本页从分类、推荐、连载状态与阅读方法几个角度，帮你建立一套自己的选漫思路。
+        </p>
+        <div class="hero-tags">
+          <span>少年热血</span>
+          <span>少女恋爱</span>
+          <span>悬疑推理</span>
+          <span>奇幻冒险</span>
+          <span>日常治愈</span>
+          <span>科幻机战</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#recommend">浏览推荐作品</a>
+          <a class="btn btn-ghost" href="#guide">查看阅读指南</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="阅读要点速览">
+        <h2>选漫前先看这几点</h2>
+        <div class="panel-row"><b>题材方向</b><span>决定是否读得下去</span></div>
+        <div class="panel-row"><b>连载状态</b><span>完结 / 连载中</span></div>
+        <div class="panel-row"><b>单话篇幅</b><span>短条漫 / 长页漫</span></div>
+        <div class="panel-row"><b>阅读载体</b><span>手机竖屏或平板横屏</span></div>
+        <div class="panel-row"><b>更新节奏</b><span>日更 / 周更 / 月更</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section class="section" id="category">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Categories</div>
+        <h2>comic漫画常见分类与题材方向</h2>
+        <p>漫画分类没有绝对统一的标准，不同平台会按受众、题材、画风或更新形式划分。下面这些方向覆盖了大部分读者的实际搜索习惯，可以作为筛选入口。</p>
+      </div>
+
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-icon">🔥</div>
+          <h3>少年热血</h3>
+          <p>以成长、战斗、伙伴关系为主线，节奏明快，适合喜欢强情节推进与情绪释放的读者。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">💗</div>
+          <h3>少女恋爱</h3>
+          <p>侧重情感描写与人物心理，画面细腻，适合偏爱细腻叙事与关系变化的读者。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🕵️</div>
+          <h3>悬疑推理</h3>
+          <p>依靠线索铺设与反转推进，阅读时建议按顺序追更，避免跳话影响推理体验。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🐉</div>
+          <h3>奇幻冒险</h3>
+          <p>包含异世界、魔法、架空世界观等设定，世界观信息量大，适合喜欢沉浸式阅读的读者。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🌿</div>
+          <h3>日常治愈</h3>
+          <p>节奏舒缓、冲突温和，单话可独立阅读，适合碎片时间放松或睡前阅读。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🚀</div>
+          <h3>科幻机战</h3>
+          <p>涉及未来设定、机械设计与科技想象，画面细节较多，建议在较大屏幕上阅读。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">📱</div>
+          <h3>竖屏条漫</h3>
+          <p>为手机阅读设计，上下滑动即可连续阅读，单话信息密度相对较低，适合通勤场景。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">📖</div>
+          <h3>页漫单行本</h3>
+          <p>传统分页排版，重视分镜与页面节奏，更适合平板或电脑端完整阅读。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 推荐 -->
+  <section class="section" id="recommend" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Recommend</div>
+        <h2>按阅读偏好整理的漫画推荐方向</h2>
+        <p>与其追一份不断变化的榜单，不如按“你想获得什么阅读体验”来选。以下方向可作为检索关键词，在任意正规漫画平台中查找同类作品。</p>
+      </div>
+
+      <div class="rec-grid">
+        <article class="rec-card">
+          <div class="rec-cover c1">热血成长</div>
+          <div class="rec-body">
+            <h3>想看得热血、有目标感</h3>
+            <p>关注“少年漫”“成长”“竞技”等标签，这类作品通常有明确的主线目标与阶段性挑战，适合连续追更。</p>
+            <div class="rec-meta"><span class="tag">少年</span><span class="tag blue">长篇</span></div>
+          </div>
+        </article>
+
+        <article class="rec-card">
+          <div class="rec-cover c2">烧脑推理</div>
+          <div class="rec-body">
+            <h3>喜欢动脑、追线索</h3>
+            <p>搜索“推理”“悬疑”“犯罪”等标签，阅读时留意画格中的细节提示，很多伏笔藏在背景与对白里。</p>
+            <div class="rec-meta"><span class="tag">悬疑</span><span class="tag blue">中短篇</span></div>
+          </div>
+        </article>
+
+        <article class="rec-card">
+          <div class="rec-cover c3">轻松治愈</div>
+          <div class="rec-body">
+            <h3>只想放松、不想被虐</h3>
+            <p>“日常”“治愈”“美食”“萌系”是常见标签，单话结构完整，随时停下也不影响理解。</p>
+            <div class="rec-meta"><span class="tag">日常</span><span class="tag blue">短篇</span></div>
+          </div>
+        </article>
+
+        <article class="rec-card">
+          <div class="rec-cover c4">恋爱情感</div>
+          <div class="rec-body">
+            <h3>想看人物关系变化</h3>
+            <p>“恋爱”“青春”“校园”等标签下作品众多，建议先看前几话判断节奏是否合口味，再决定是否追更。</p>
+            <div class="rec-meta"><span class="tag">恋爱</span><span class="tag blue">中篇</span></div>
+          </div>
+        </article>
+
+        <article class="rec-card">
+          <div class="rec-cover c5">奇幻世界观</div>
+          <div class="rec-body">
+            <h3>喜欢设定与想象力</h3>
+            <p>“奇幻”“异世界”“魔法”类作品前期常有大量设定交代，耐心读完开篇通常会有更好的阅读回报。</p>
+            <div class="rec-meta"><span class="tag">奇幻</span><span class="tag blue">长篇</span></div>
+          </div>
+        </article>
+
+        <article class="rec-card">
+          <div class="rec-cover c6">都市现实</div>
+          <div class="rec-body">
+            <h3>偏好贴近生活的题材</h3>
+            <p>“都市”“职场”“生活”类漫画往往以现实议题为切入点，情绪表达更克制，适合成年读者。</p>
+            <div class="rec-meta"><span class="tag">都市</span><span class="tag blue">中短篇</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 更新与榜单 -->
+  <section class="section" id="update">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Updates</div>
+        <h2>连载更新与追更节奏参考</h2>
+        <p>追更体验和作品质量同样重要。下面按常见更新节奏整理了几种追更方式，帮助你安排阅读时间，避免“追到一半断更”的落差。</p>
+      </div>
+
+      <div class="update-layout">
+        <div class="update-list">
+          <article class="update-item">
+            <div class="update-thumb c2">周更</div>
+            <div class="update-info">
+              <h3>每周固定更新的连载作品</h3>
+              <p>节奏稳定，适合建立固定阅读习惯，建议收藏后按更新日集中阅读。</p>
+            </div>
+            <span class="update-badge">稳定</span>
+          </article>
+
+          <article class="update-item">
+            <div class="update-thumb c1">日更</div>
+            <div class="update-info">
+              <h3>每日更新的竖屏条漫</h3>
+              <p>单话篇幅短，适合通勤与碎片时间，但需要留意剧情连续性。</p>
+            </div>
+            <span class="update-badge">高频</span>
+          </article>
+
+          <article class="update-item">
+            <div class="update-thumb c3">完结</div>
+            <div class="update-info">
+              <h3>已完结可一次性阅读的作品</h3>
+              <p>不用担心断更，适合喜欢一口气读完完整故事的读者。</p>
+            </div>
+            <span class="update-badge">推荐</span>
+          </article>
+
+          <article class="update-item">
+            <div class="update-thumb c5">月更</div>
+            <div class="update-info">
+              <h3>月刊或双月刊连载</h3>
+              <p>单话信息量大、画面精细，适合慢慢品读，但等待周期较长。</p>
+            </div>
+            <span class="update-badge">慢节奏</span>
+          </article>
+
+          <article class="update-item">
+            <div class="update-thumb c4">新作</div>
+            <div class="update-info">
+              <h3>刚开篇的新连载</h3>
+              <p>可先看前几话判断画风与叙事是否合口味，再决定是否长期追更。</p>
+            </div>
+            <span class="update-badge">观望</span>
+          </article>
+        </div>
+
+        <aside>
+          <div class="side-card">
+            <h3>选漫时容易忽略的细节</h3>
+            <div class="rank-item">
+              <span class="rank-no">1</span>
+              <div>
+                <b>先看简介再看画风</b>
+                <p>简介能快速判断题材是否对味，画风决定能否长期看下去。</p>
+              </div>
+            </div>
+            <div class="rank-item">
+              <span class="rank-no">2</span>
+              <div>
+                <b>试读前三话</b>
+                <p>多数作品前三话会交代核心设定与叙事节奏，是判断是否追更的关键。</p>
+              </div>
+            </div>
+            <div class="rank-item">
+              <span class="rank-no">3</span>
+              <div>
+                <b>留意更新状态</b>
+                <p>长期停更的作品阅读体验会受影响，追更前可先确认最近更新时间。</p>
+              </div>
+            </div>
+            <div class="rank-item">
+              <span class="rank-no">4</span>
+              <div>
+                <b>选择合适屏幕</b>
+                <p>页漫适合大屏，条漫适合手机竖屏，设备不匹配会明显降低阅读体验。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-card">
+            <h3>阅读环境小建议</h3>
+            <p style="font-size:14px;color:var(--ink-soft)">
+              长时间阅读漫画时，建议保持屏幕亮度与环境光接近，每隔一段时间让眼睛休息；
+              夜间阅读可开启护眼模式，避免在完全黑暗的环境下长时间盯屏。
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 指南 -->
+  <section class="section guide" id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Guide</div>
+        <h2>comic漫画阅读与选择实用指南</h2>
+        <p>从第一次接触漫画，到形成稳定的阅读习惯，下面几个步骤可以帮助你更快找到适合自己的作品。</p>
+      </div>
+
+      <div class="guide-grid">
+        <article class="guide-item">
+          <div class="num">STEP 01</div>
+          <h3>明确阅读目的</h3>
+          <p>是想放松、找刺激、看情感还是研究分镜？目的不同，适合的题材和篇幅也不同。放松可选日常治愈类短篇，追求情节张力可以看热血或悬疑长篇。</p>
+        </article>
+
+        <article class="guide-item">
+          <div class="num">STEP 02</div>
+          <h3>用标签组合筛选</h3>
+          <p>单一标签往往过于宽泛，把“题材 + 篇幅 + 状态”组合起来搜索，例如“悬疑 完结 中篇”，能显著缩小范围，提高找到合适作品的概率。</p>
+        </article>
+
+        <article class="guide-item">
+          <div class="num">STEP 03</div>
+          <h3>试读并记录感受</h3>
+          <p>读前三话后问自己三个问题：画风是否顺眼、对白是否自然、有没有想继续看下一话的冲动。三个都过关，再考虑加入追更列表。</p>
+        </article>
+
+        <article class="guide-item">
+          <div class="num">STEP 04</div>
+          <h3>安排追更节奏</h3>
+          <p>同时追太多作品容易记混剧情。建议把连载控制在合理数量，完结作品可以随时补，连载作品按更新周期集中阅读。</p>
+        </article>
+
+        <article class="guide-item">
+          <div class="num">STEP 05</div>
+          <h3>注意阅读来源</h3>
+          <p>优先选择有明确版权说明的正规平台阅读，页面体验更稳定，也能获得更清晰的画质与更新提醒，避免来源不明的站点带来的风险。</p>
+        </article>
+
+        <article class="guide-item">
+          <div class="num">STEP 06</div>
+          <h3>适度阅读、保护视力</h3>
+          <p>漫画容易一话接一话地看下去，建议设定单次阅读时长，配合远眺放松，让阅读成为长期可持续的爱好。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">FAQ</div>
+        <h2>关于comic漫画的常见问题</h2>
+        <p>以下是初次接触漫画阅读时较常被问到的问题，回答以通用情况为主，具体情况会因平台与作品而异。</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>comic漫画和动漫、动画有什么区别？</summary>
+          <p>漫画是以静态画格与文字讲述故事的形式，动画则是在此基础上加入动态画面与配音。动漫一词在中文语境中常被用来泛指漫画与动画相关内容，严格来说并不是一种独立的作品形式。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>条漫和页漫应该怎么选？</summary>
+          <p>条漫为上下滑动设计，单话较短，适合手机阅读和碎片时间；页漫采用传统分页排版，分镜和跨页表现更完整，适合平板或电脑端。选择主要取决于你常用的设备和阅读时长。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>怎样判断一部漫画是否值得追？</summary>
+          <p>可以先看简介确认题材，再试读前三话感受画风与叙事节奏，同时留意最近更新时间。如果三话之后仍有继续阅读的意愿，通常说明这部作品与你的口味比较契合。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>连载中的作品断更了怎么办？</summary>
+          <p>可以先把已更新的部分读完，再关注作者的公开说明。若长期没有更新，建议先移出追更列表，等恢复更新后再继续阅读，避免反复查看带来的等待消耗。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>看漫画需要付费吗？</summary>
+          <p>不同平台的模式差异较大，有的作品可免费阅读，有的采用部分免费或付费章节的形式。具体以平台页面说明为准，建议选择说明清晰、版权信息明确的正规渠道。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>长时间看漫画如何减轻眼睛负担？</summary>
+          <p>保持环境光充足、屏幕亮度与环境接近，避免在黑暗环境中长时间阅读；每隔一段时间远眺放松，夜间可开启护眼模式，并适当控制单次阅读时长。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">comic漫画</div>
+        <p>一个面向漫画爱好者的阅读参考页面，整理漫画分类、选漫方法、追更节奏与阅读注意事项，帮助你更高效地找到想看的作品。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容导航</h4>
+        <a href="#category">漫画分类</a>
+        <a href="#recommend">作品推荐</a>
+        <a href="#update">连载更新</a>
+      </div>
+      <div class="footer-col">
+        <h4>阅读帮助</h4>
+        <a href="#guide">阅读指南</a>
+        <a href="#faq">常见问题</a>
+        <a href="#top">返回顶部</a>
+      </div>
+      <div class="footer-col">
+        <h4>阅读提示</h4>
+        <a href="#guide">选择正规平台</a>
+        <a href="#guide">合理安排时长</a>
+        <a href="#faq">注意用眼健康</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>本页内容为漫画阅读相关的通用参考信息，具体作品与平台情况请以实际页面为准。</span>
+      <span>comic漫画阅读指南</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+                </html>
