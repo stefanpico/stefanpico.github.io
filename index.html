@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>华人影院在线观看 - 华语电影电视剧在线播放与观影指南</title>
+<meta name="description" content="华人影院在线观看指南，整理华语电影、电视剧、综艺、纪录片等在线播放信息，提供选片建议、画质与字幕说明、常见问题解答，帮助中文观众快速找到合适的观影内容。">
+<meta name="keywords" content="华人影院在线观看,华语电影在线观看,华人影院,中文影院,在线看电影,华语电视剧在线播放">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f1117;
+  --bg-soft: #171a23;
+  --panel: #1d2130;
+  --panel-2: #232838;
+  --line: #2e3446;
+  --text: #eef1f7;
+  --text-dim: #a4abbe;
+  --accent: #ff5f4d;
+  --accent-2: #ffb03a;
+  --gold: #f2c14e;
+  --radius: 14px;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+body {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 顶部导航 */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(15, 17, 23, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+  gap: 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a1207;
+}
+
+.main-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 15px;
+  color: var(--text-dim);
+  transition: 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #fff;
+  background: var(--panel-2);
+}
+
+.header-cta {
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #1a1207;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 6px 11px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  padding: 64px 0 56px;
+  background:
+    radial-gradient(900px 420px at 12% -10%, rgba(255, 95, 77, 0.22), transparent 60%),
+    radial-gradient(760px 380px at 88% 0%, rgba(255, 176, 58, 0.16), transparent 62%),
+    var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.hero h1 span {
+  background: linear-gradient(120deg, var(--accent), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p.lead {
+  font-size: 17px;
+  color: var(--text-dim);
+  max-width: 620px;
+  margin-bottom: 26px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #1a1207;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 95, 77, 0.28);
+}
+
+.btn-ghost {
+  border-color: var(--line);
+  color: var(--text);
+  background: var(--bg-soft);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.hero-tags span {
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* 搜索框 */
+.search-box {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.search-box h2 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.search-box p {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+}
+
+.search-row input {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 14px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+
+.search-row input:focus {
+  border-color: var(--accent);
+}
+
+.search-row button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #1a1207;
+  border: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hot-words {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.hot-words a {
+  color: var(--text-dim);
+  border-bottom: 1px dashed var(--line);
+}
+
+.hot-words a:hover {
+  color: var(--accent-2);
+}
+
+/* 通用区块 */
+.section {
+  padding: 58px 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.section-head h2 {
+  font-size: 26px;
+  letter-spacing: -0.3px;
+}
+
+.section-head p {
+  color: var(--text-dim);
+  font-size: 14px;
+  max-width: 640px;
+  margin-top: 8px;
+}
+
+.section-head .more {
+  font-size: 14px;
+  color: var(--accent-2);
+  white-space: nowrap;
+}
+
+/* 分类导航 */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.cat-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  transition: 0.22s;
+}
+
+.cat-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  background: var(--panel-2);
+}
+
+.cat-card .emoji {
+  font-size: 22px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cat-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.cat-card p {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+/* 影片卡片 */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: 0.22s;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.poster {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(150deg, #2b3143, #1a1e2b 60%);
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  text-align: center;
+}
+
+.poster .poster-title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.poster .poster-sub {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 95, 77, 0.92);
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.badge.gold {
+  background: rgba(242, 193, 78, 0.92);
+  color: #2b1f00;
+}
+
+.movie-body {
+  padding: 14px 15px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.movie-body h3 {
+  font-size: 15.5px;
+  line-height: 1.4;
+}
+
+.movie-body .meta {
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.movie-body .desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  flex: 1;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 11.5px;
+  color: var(--accent-2);
+  border: 1px solid rgba(255, 176, 58, 0.35);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* 榜单 */
+.rank-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+}
+
+.rank-list {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 8px 6px;
+}
+
+.rank-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.rank-item:hover {
+  background: var(--panel-2);
+}
+
+.rank-no {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--bg-soft);
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.rank-item:nth-child(1) .rank-no { background: linear-gradient(135deg, #ff5f4d, #ffb03a); color: #1a1207; }
+.rank-item:nth-child(2) .rank-no { background: #f2c14e; color: #2b1f00; }
+.rank-item:nth-child(3) .rank-no { background: #c9a227; color: #2b1f00; }
+
+.rank-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.rank-info h3 {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rank-info p {
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.rank-score {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+/* 侧栏说明卡 */
+.side-card {
+  background: linear-gradient(160deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.side-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.side-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.side-card li {
+  font-size: 14px;
+  color: var(--text-dim);
+  padding-left: 20px;
+  position: relative;
+}
+
+.side-card li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* 观影指南 */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.guide-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.guide-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.guide-card h3 .num {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(255, 95, 77, 0.15);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.guide-card p {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 900px;
+}
+
+.faq-item {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.faq-q {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 15.5px;
+  font-weight: 600;
+  padding: 17px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: inherit;
+}
+
+.faq-q .icon {
+  color: var(--accent);
+  font-size: 18px;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-q .icon {
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-a p {
+  padding: 0 20px 18px;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+/* 页脚 */
+.site-footer {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  padding: 48px 0 26px;
+  margin-top: 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.footer-col h4 {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.footer-col p {
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer-col ul a {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  transition: 0.2s;
+}
+
+.footer-col ul a:hover {
+  color: var(--accent-2);
+}
+
+.footer-bottom {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--text-dim);
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* 响应式 */
+@media (max-width: 980px) {
+  .hero-grid,
+  .rank-layout {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    padding: 12px 20px 18px;
+    gap: 4px;
+  }
+  .main-nav.open {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .header-cta {
+    display: none;
+  }
+  .hero {
+    padding: 44px 0 40px;
+  }
+  .hero h1 {
+    font-size: 27px;
+  }
+  .section {
+    padding: 42px 0;
+  }
+  .section-head h2 {
+    font-size: 22px;
+  }
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px;
+  }
+  .poster .poster-title {
+    font-size: 15px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
+@media (max-width: 420px) {
+  .movie-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .search-row {
+    flex-direction: column;
+  }
+  .search-row button {
+    padding: 11px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">华</span>
+      华人影院
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#categories" class="active">分类</a>
+      <a href="#hot">热门推荐</a>
+      <a href="#rank">口碑榜单</a>
+      <a href="#guide">观影指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#hot" class="header-cta">开始选片</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="展开导航">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>华人影院在线观看：<span>华语影视内容一站式选片入口</span></h1>
+        <p class="lead">
+          想找一部能安心看完的华语电影或剧集，往往卡在“不知道看什么”这一步。这里按类型、地区、年份和口碑整理华语影视内容，提供选片思路、画质与字幕说明、播放注意事项，帮助你更快锁定想看的那一部。
+        </p>
+        <div class="hero-actions">
+          <a href="#hot" class="btn btn-primary">浏览热门推荐</a>
+          <a href="#guide" class="btn btn-ghost">查看观影指南</a>
+        </div>
+        <div class="hero-tags">
+          <span>华语电影</span>
+          <span>国产剧集</span>
+          <span>港台经典</span>
+          <span>综艺纪实</span>
+          <span>字幕说明</span>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <h2>快速找片</h2>
+        <p>输入片名、演员或类型关键词，获取对应内容方向。</p>
+        <div class="search-row">
+          <input type="text" id="searchInput" placeholder="例如：悬疑、武侠、家庭剧" aria-label="搜索影片">
+          <button type="button" id="searchBtn">搜索</button>
+        </div>
+        <div class="hot-words">
+          <span>大家都在找：</span>
+          <a href="#hot">家庭剧</a>
+          <a href="#hot">悬疑</a>
+          <a href="#hot">武侠</a>
+          <a href="#hot">喜剧</a>
+          <a href="#rank">高分片</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section class="section" id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>按类型浏览华语影视</h2>
+          <p>不同观众的口味差异很大，先确定类型，再挑具体作品，通常比漫无目的地翻列表更高效。</p>
+        </div>
+        <a href="#hot" class="more">查看全部推荐 →</a>
+      </div>
+      <div class="cat-grid">
+        <a href="#hot" class="cat-card">
+          <span class="emoji">🎬</span>
+          <h3>剧情长片</h3>
+          <p>现实题材与文艺向作品，适合安静观看。</p>
+        </a>
+        <a href="#hot" class="cat-card">
+          <span class="emoji">🕵️</span>
+          <h3>悬疑犯罪</h3>
+          <p>推理、刑侦与反转结构，节奏偏紧凑。</p>
+        </a>
+        <a href="#hot" class="cat-card">
+          <span class="emoji">⚔️</span>
+          <h3>武侠古装</h3>
+          <p>江湖、历史与古典美学题材集合。</p>
+        </a>
+        <a href="#hot" class="cat-card">
+          <span class="emoji">😂</span>
+          <h3>喜剧轻松</h3>
+          <p>适合放松时段，节奏轻快、门槛低。</p>
+        </a>
+        <a href="#hot" class="cat-card">
+          <span class="emoji">🏠</span>
+          <h3>家庭生活</h3>
+          <p>亲子、婚姻与代际关系题材。</p>
+        </a>
+        <a href="#hot" class="cat-card">
+          <span class="emoji">📺</span>
+          <h3>连续剧集</h3>
+          <p>长线追剧，适合按集数规划时间。</p>
+        </a>
+        <a href="#hot" class="cat-card">
+          <span class="emoji">🎤</span>
+          <h3>综艺纪实</h3>
+          <p>访谈、真人秀与纪录片方向。</p>
+        </a>
+        <a href="#hot" class="cat-card">
+          <span class="emoji">🎞️</span>
+          <h3>经典回顾</h3>
+          <p>早期港台与内地经典作品整理。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门推荐 -->
+  <section class="section" id="hot" style="background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>热门推荐方向</h2>
+          <p>以下为按题材与观看场景整理的推荐方向，具体片源请以各正规平台实际提供的内容为准。</p>
+        </div>
+        <a href="#rank" class="more">查看口碑榜单 →</a>
+      </div>
+      <div class="movie-grid">
+
+        <article class="movie-card">
+          <div class="poster">
+            <span class="badge">热播</span>
+            <div>
+              <div class="poster-title">都市家庭剧</div>
+              <div class="poster-sub">现实 · 情感</div>
+            </div>
+          </div>
+          <div class="movie-body">
+            <h3>都市家庭题材剧集</h3>
+            <p class="meta">适合：全家观看 · 节奏平稳</p>
+            <p class="desc">围绕婚姻、育儿与职场展开，剧情贴近生活，适合下班后放松观看。</p>
+            <div class="tag-row">
+              <span class="tag">家庭</span>
+              <span class="tag">现实</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <div class="poster">
+            <span class="badge gold">高口碑</span>
+            <div>
+              <div class="poster-title">悬疑推理片</div>
+              <div class="poster-sub">犯罪 · 反转</div>
+            </div>
+          </div>
+          <div class="movie-body">
+            <h3>华语悬疑推理作品</h3>
+            <p class="meta">适合：专注观看 · 需要动脑</p>
+            <p class="desc">线索层层递进，建议一次看完，避免中途被打断影响推理体验。</p>
+            <div class="tag-row">
+              <span class="tag">悬疑</span>
+              <span class="tag">犯罪</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <div class="poster">
+            <span class="badge">经典</span>
+            <div>
+              <div class="poster-title">武侠江湖片</div>
+              <div class="poster-sub">古装 · 动作</div>
+            </div>
+          </div>
+          <div class="movie-body">
+            <h3>武侠与古装题材</h3>
+            <p class="meta">适合：怀旧观看 · 偏爱古典美学</p>
+            <p class="desc">注重氛围与人物关系，画面与配乐往往是这类作品的加分项。</p>
+            <div class="tag-row">
+              <span class="tag">武侠</span>
+              <span class="tag">古装</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <div class="poster">
+            <span class="badge">轻松</span>
+            <div>
+              <div class="poster-title">生活喜剧</div>
+              <div class="poster-sub">喜剧 · 治愈</div>
+            </div>
+          </div>
+          <div class="movie-body">
+            <h3>轻松向喜剧作品</h3>
+            <p class="meta">适合：碎片时间 · 放松心情</p>
+            <p class="desc">单集或单片时长友好，适合吃饭、通勤等零散时间观看。</p>
+            <div class="tag-row">
+              <span class="tag">喜剧</span>
+              <span class="tag">治愈</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <div class="poster">
+            <span class="badge gold">纪实</span>
+            <div>
+              <div class="poster-title">人文纪录片</div>
+              <div class="poster-sub">纪实 · 人文</div>
+            </div>
+          </div>
+          <div class="movie-body">
+            <h3>人文与社会纪录片</h3>
+            <p class="meta">适合：安静观看 · 拓展视野</p>
+            <p class="desc">以真实人物与地域故事为主，适合对文化与历史感兴趣的观众。</p>
+            <div class="tag-row">
+              <span class="tag">纪录片</span>
+              <span class="tag">人文</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <div class="poster">
+            <span class="badge">港台</span>
+            <div>
+              <div class="poster-title">港台经典</div>
+              <div class="poster-sub">怀旧 · 剧情</div>
+            </div>
+          </div>
+          <div class="movie-body">
+            <h3>港台地区经典作品</h3>
+            <p class="meta">适合：怀旧重温 · 研究影史</p>
+            <p class="desc">不少作品在叙事与表演上具有时代印记，适合按年代顺序回看。</p>
+            <div class="tag-row">
+              <span class="tag">港台</span>
+              <span class="tag">经典</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <div class="poster">
+            <span class="badge">青春</span>
+            <div>
+              <div class="poster-title">青春成长</div>
+              <div class="poster-sub">校园 · 成长</div>
+            </div>
+          </div>
+          <div class="movie-body">
+            <h3>青春与成长题材</h3>
+            <p class="meta">适合：学生群体 · 情感共鸣</p>
+            <p class="desc">聚焦校园、友情与自我认知，情绪表达直接，容易引发共鸣。</p>
+            <div class="tag-row">
+              <span class="tag">青春</span>
+              <span class="tag">校园</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="movie-card">
+          <div class="poster">
+            <span class="badge">科幻</span>
+            <div>
+              <div class="poster-title">科幻奇幻</div>
+              <div class="poster-sub">想象 · 视效</div>
+            </div>
+          </div>
+          <div class="movie-body">
+            <h3>华语科幻与奇幻</h3>
+            <p class="meta">适合：大屏观看 · 注重视听</p>
+            <p class="desc">对画面与音效要求较高，建议在网络稳定、屏幕较大的设备上观看。</p>
+            <div class="tag-row">
+              <span class="tag">科幻</span>
+              <span class="tag">奇幻</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="section" id="rank">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>口碑榜单参考</h2>
+          <p>榜单按题材口碑与讨论热度方向整理，仅作为选片参考，不构成对具体作品的评价结论。</p>
+        </div>
+      </div>
+      <div class="rank-layout">
+        <div class="rank-list">
+          <div class="rank-item">
+            <span class="rank-no">1</span>
+            <div class="rank-info">
+              <h3>现实题材剧情长片</h3>
+              <p>关注社会议题与人物命运，适合深度观看</p>
+            </div>
+            <span class="rank-score">口碑向</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">2</span>
+            <div class="rank-info">
+              <h3>刑侦悬疑剧集</h3>
+              <p>结构紧凑，适合连续追看</p>
+            </div>
+            <span class="rank-score">热度向</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">3</span>
+            <div class="rank-info">
+              <h3>古典武侠作品</h3>
+              <p>美学风格突出，怀旧观众偏好</p>
+            </div>
+            <span class="rank-score">经典向</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">4</span>
+            <div class="rank-info">
+              <h3>都市情感剧</h3>
+              <p>贴近日常，适合家庭共同观看</p>
+            </div>
+            <span class="rank-score">大众向</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">5</span>
+            <div class="rank-info">
+              <h3>人文纪录片</h3>
+              <p>节奏舒缓，信息密度较高</p>
+            </div>
+            <span class="rank-score">知识向</span>
+          </div>
+          <div class="rank-item">
+            <span class="rank-no">6</span>
+            <div class="rank-info">
+              <h3>生活喜剧</h3>
+              <p>轻松解压，入门门槛低</p>
+            </div>
+            <span class="rank-score">轻松向</span>
+          </div>
+        </div>
+
+        <aside class="side-card">
+          <h3>选片前先想清楚三件事</h3>
+          <ul>
+            <li>这次是想放松，还是想认真看一部有信息量的作品？</li>
+            <li>能投入多长时间？单片和长剧的观看节奏差别很大。</li>
+            <li>是否介意字幕？部分作品只有原声加字幕版本。</li>
+          </ul>
+          <p style="margin-top:18px;font-size:13.5px;color:var(--text-dim);">
+            把这三个问题回答清楚，通常能过滤掉大部分“点开又关掉”的情况。
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观影指南 -->
+  <section class="section" id="guide" style="background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>在线观看实用指南</h2>
+          <p>在线观看体验受网络、设备、字幕和平台规则影响，提前了解这几点能减少很多麻烦。</p>
+        </div>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <h3><span class="num">1</span>选正规渠道观看</h3>
+          <p>优先选择有明确版权信息的正规视频平台观看，画质、字幕和播放稳定性更有保障，也更符合内容合规要求。遇到来源不明的播放页面，建议谨慎对待。</p>
+        </div>
+        <div class="guide-card">
+          <h3><span class="num">2</span>关注画质与码率</h3>
+          <p>同一部作品在不同清晰度下的观感差别明显。网络条件允许时选择较高清晰度，动作片和视效类作品尤其建议使用大屏设备观看。</p>
+        </div>
+        <div class="guide-card">
+          <h3><span class="num">3</span>字幕与原声选择</h3>
+          <p>部分华语作品提供原声、配音与多语言字幕选项。方言较多的作品建议开启字幕，避免因听不清而影响理解剧情。</p>
+        </div>
+        <div class="guide-card">
+          <h3><span class="num">4</span>合理安排追剧节奏</h3>
+          <p>长剧集容易连续观看过久，建议按集数或时间段规划，既保护视力，也能保持对剧情的关注度。</p>
+        </div>
+        <div class="guide-card">
+          <h3><span class="num">5</span>留意内容分级提示</h3>
+          <p>涉及暴力、犯罪等题材的作品，建议家长提前了解内容方向，避免未成年人在无引导的情况下单独观看。</p>
+        </div>
+        <div class="guide-card">
+          <h3><span class="num">6</span>设备与网络准备</h3>
+          <p>观看前确认网络稳定、电量充足，投屏或外接音响时提前测试连接，避免在关键剧情处中断。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>常见问题</h2>
+          <p>关于华人影院在线观看，观众最常关心的几个问题整理如下。</p>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            “华人影院在线观看”一般指什么内容？
+            <span class="icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>通常指以华语电影、电视剧、综艺、纪录片为主要内容的在线观看需求，观众关注的是中文内容、中文字幕以及符合自己语言习惯的观影体验。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            在线观看需要注意哪些合规问题？
+            <span class="icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>建议选择具备版权资质的正规平台观看，不传播、不下载来源不明的影视资源。这样既能获得更稳定的播放体验，也避免涉及侵权风险。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            为什么同一部片子在不同平台清晰度不一样？
+            <span class="icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>清晰度与平台提供的片源版本、编码方式以及你的网络带宽有关。部分老片受限于原始素材，即使平台提供高清选项，实际观感也可能有限。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            只有配音没有原声，会影响观看吗？
+            <span class="icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>取决于作品类型。生活类、喜剧类作品配音接受度较高；而方言、口音较重的作品，原声往往更能保留表演细节，建议根据个人习惯选择。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            如何避免选到不适合自己的片子？
+            <span class="icon">＋</span>
+          </button>
+          <div class="faq-a">
+            <p>可以先看简介、题材标签和时长，再决定是否开始。如果对暴力、恐怖等内容较为敏感，提前查看内容提示会更有帮助。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>华人影院</h4>
+        <p>面向中文观众的华语影视内容导航与观影指南，帮助你在有限时间里更快找到想看的内容。站内内容以信息整理与观看建议为主。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容分类</h4>
+        <ul>
+          <li><a href="#categories">剧情长片</a></li>
+          <li><a href="#categories">悬疑犯罪</a></li>
+          <li><a href="#categories">武侠古装</a></li>
+          <li><a href="#categories">综艺纪实</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>使用帮助</h4>
+        <ul>
+          <li><a href="#guide">在线观看指南</a></li>
+          <li><a href="#guide">画质与字幕说明</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#rank">口碑榜单参考</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>温馨提示</h4>
+        <ul>
+          <li><a href="#guide">选择正规渠道观看</a></li>
+          <li><a href="#guide">注意用眼与休息</a></li>
+          <li><a href="#guide">关注内容分级提示</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 华人影院在线观看指南 · 内容仅供观影参考</span>
+      <span>请通过正规平台观看影视作品，尊重版权</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 移动端导航
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function () {
+      mainNav.classList.toggle('open');
+    });
+    mainNav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        mainNav.classList.remove('open');
+      }
+    });
+  }
+
+  // FAQ 折叠
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    var btn = item.querySelector('.faq-q');
+    var answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      faqItems.forEach(function (other) {
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // 搜索提示
+  var searchBtn = document.getElementById('searchBtn');
+  var searchInput = document.getElementById('searchInput');
+  if (searchBtn && searchInput) {
+    searchBtn.addEventListener('click', function () {
+      var kw = searchInput.value.trim();
+      if (!kw) {
+        searchInput.focus();
+        return;
+      }
+      var target = document.getElementById('hot');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        searchBtn.click();
+      }
+    });
+  }
+</script>
+
+</body>
+  </html>
